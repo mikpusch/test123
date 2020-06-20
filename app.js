@@ -11,7 +11,7 @@ var dev = [
 	{first: 'Bob', last: 'Alice'}
 ];
 
-app.get('/rest/developer', (req, res) => res.json(dev));
+app.get('/', (req, res) => res.json(dev));
 
 //var ip = process.env.OPENSHIFT_NODEJS_IP;
 var ip = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
