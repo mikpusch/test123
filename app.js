@@ -23,4 +23,5 @@ if (local){
 }
 
 app.listen(port, ip);
-console.log("listen to port ", port)
+console.log("listen to port ", port);
+module.exports = app ;
