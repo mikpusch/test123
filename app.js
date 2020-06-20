@@ -13,8 +13,9 @@ var dev = [
 
 app.get('/rest/developer', (req, res) => res.json(dev));
 
-var ip = process.env.OPENSHIFT_NODEJS_IP;
-var port = process.env.OPENSHIFT_NODEJS_PORT;
+//var ip = process.env.OPENSHIFT_NODEJS_IP;
+var ip = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+var port = process.env.OPENSHIFT_NODEJS_PORT || 80;
 
 if (local){
 	ip = '127.0.0.1';
